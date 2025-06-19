@@ -108,7 +108,7 @@ const scrapeNawy = async () => {
 
                     // Simplified project transformation
                     return {
-                        name: compound.name,
+                        name: compound.name ? compound.name.trim().toLowerCase() : '',
                         area_id: compound.area_id,
                         developer_id: compound.developer_id,
                         inventory_public: compound.inventory_public,
